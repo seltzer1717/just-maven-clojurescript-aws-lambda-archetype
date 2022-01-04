@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="just-testing"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+      <requiredProperty key = "maven-compiler-source">
+        <defaultValue>17</defaultValue>
+      </requiredProperty>
+      <requiredProperty key = "maven-compiler-target">
+        <defaultValue>17</defaultValue>
+      </requiredProperty>
+      <requiredProperty key = "clojure-version">
+        <defaultValue>1.10.2</defaultValue>
+      </requiredProperty>
+      <requiredProperty key = "clojurescript-version">
+        <defaultValue>1.10.914</defaultValue>
+      </requiredProperty>
+      <requiredProperty key = "commons-codec-version">
+        <defaultValue>1.15</defaultValue>
+      </requiredProperty>
+      <requiredProperty key = "core-async-version">
+        <defaultValue>1.5.640</defaultValue>
+      </requiredProperty>
+    </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/clojurescript</directory>
+      <includes>
+        <include>**/*.cljs</include>
+        <include>**/*.cljc</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/test/clojurescript</directory>
+      <includes>
+        <include>**/*.cljs</include>
+        <include>**/*.cljc</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.clojure/scripts</directory>
+      <includes>
+        <include>cljs.clj</include>
+        <include>compile.clj</include>
+        <include>lambdaCompile.clj</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.clojure/opts</directory>
+      <includes>
+        <include>compile_opts.edn</include>
+        <include>compile_test_opts.edn</include>
+        <include>compile_repl_opts.edn</include>
+        <include>repl_opts.edn</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>clj.bat</include>
+        <include>cljs.bat</include>
+        <include>cljs_help.txt</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>

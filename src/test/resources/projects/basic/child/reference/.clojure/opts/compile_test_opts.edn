@@ -1,0 +1,8 @@
+{:main          "com.example.sample.test-suite"
+ :output-dir    "target/test-js"
+ :output-to     "target/test-js/testIndex.js"
+ :optimizations :none
+ :target        :nodejs
+ :npm-deps      {"@aws-sdk/client-s3" "3.43.0"
+                 "source-map-support" "0.5.21"}
+ :install-deps  true}

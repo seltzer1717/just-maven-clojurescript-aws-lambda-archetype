@@ -1,0 +1,9 @@
+{:main          "com.example.sample.core"
+ :output-dir    "target/js"
+ :output-to     "target/js/index.js"
+ :optimizations :none
+ :target        :nodejs
+ :deps-cmd      "npm"
+ :npm-deps      {"@aws-sdk/client-s3" "3.43.0"
+                 "source-map-support" "0.5.21"}
+ :install-deps  true}

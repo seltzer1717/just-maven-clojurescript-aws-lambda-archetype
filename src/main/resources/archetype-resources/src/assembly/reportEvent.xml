@@ -1,0 +1,25 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">
+  <id>reportEvent</id>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>${basedir}/target/js</directory>
+      <excludes>
+        <exclude>index.js</exclude>
+      </excludes>
+      <outputDirectory>target/js</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>${basedir}/target/js</directory>
+      <includes>
+        <include>index.js</include>
+      </includes>
+      <outputDirectory>.</outputDirectory>
+    </fileSet>
+  </fileSets>
+</assembly>

@@ -1,0 +1,7 @@
+{:output-dir    "target/repl-js"
+ :output-to     "target/repl-js/index.js"
+ :target        :nodejs
+ :deps-cmd      "npm"
+ :npm-deps      {"@aws-sdk/client-s3" "3.43.0"
+                 "source-map-support" "0.5.21"}
+ :install-deps  true}
